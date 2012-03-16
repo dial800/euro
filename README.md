@@ -433,10 +433,8 @@ No match for the call.
 
 [MercuryMedia](www.mercurymedia.com) uses two slightly different formats, [MLF](http://docs.dial800.com/dial800/mlf) and [MSF](http://docs.dial800.com/dial800/msf).
 
+## Other Integrations
+
 ### Dial800
 
 [Our native interface](http://docs.dial800.com/).
-
-### Euro
-
-Are you using Euro's format? You can find the details [here](http://docs.dial800.com/dial800/euro).
