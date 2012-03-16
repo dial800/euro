@@ -19,7 +19,7 @@ We know. You have two days to integrate with us. Don't worry, it's easy. We're h
 $request = new HTTP_Request2('http://routing.dial800.com/roundtrip');
 $request->setMethod(HTTP_Request2::METHOD_POST)
     ->setAuth('user','password', HTTP_Request2::AUTH_BASIC)
-    ->setHeader('Content-type: application/roundtrip.sales')
+    ->setHeader('Content-type: application/euro')
     ->setBody(
         "<?xml version=\"1.0\" encoding=\"utf-8\" ?">\r\n" .
         "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\r\n" .
@@ -93,7 +93,7 @@ namespace Dial800
             byte[] postDataBytes;
             const string userName    = "user";
             const string password    = "password";
-            const string contentType = "application/roundtrip.sales";
+            const string contentType = "application/euro";
             const string postMethod  = "POST";
             const string postData    
             = @"<?xml version="1.0" encoding="utf-8" ?>
@@ -241,7 +241,7 @@ payload = '''
 '''
 r = request.post('http://routing.dial800.com/routing',
                  auth=HTTPBasicAuth('user','password'),
-                 headers={'content-type': 'application/roundtrip.sales'},
+                 headers={'content-type': 'application/euro'},
                  data=payload)
 ```
 
@@ -257,7 +257,7 @@ http         = Net::HTTP.new(uri.host, uri.port)
 request      = Net::HTTP::Post.new(uri.host,uri.port)
 request.body = xml_string
 request.basic_auth("user","password")
-request.content_type = "application/roundtrip.sales"
+request.content_type = "application/euro"
 response     = http.request(request)
 ```
 
@@ -271,39 +271,55 @@ response     = http.request(request)
 
 ```
 POST /calls
-Content-Type: application/roundtrip.sales
+Content-Type: application/euro
 ```
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Call xmlns="http://www.dial800.com/roundtrip/2011-07-15"
-      xmlns:rs="http://www.dial800.com/roundtrip-sales/2011-08-04">      
+      xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
     <ANI>tel:3105555555</ANI>
     <Target>tel:3109999999</Target>
     <CallStart>2011-07-15T01:02:03-08:00</CallStart>
-    <mlf:TelemarketingCompanyCode>UMG</mlf:TelemarketingCompanyCode>
-    <mlf:ProductCode>GDV3</mlf:ProductCode>
-    <mlf:RecordStatus>V</mlf:RecordStatus>
-    <mlf:City>Los Angeles</mlf:City>
-    <mlf:State>CA</mlf:State>
-    <mlf:ZipCode>90210</mlf:ZipCode>
-    <mlf:MediaSource>XBDC</mlf:MediaSource>
-    <mlf:OrderDateTime>2011-08-03T00:00:00Z</mlf:OrderDateTime>
-    <mlf:UniqueOrderNumber>123456</mlf:UniqueOrderNumber>
-    <mlf:PaymentCode>A</mlf:PaymentCode>
-    <mlf:MenuResponses>5</mlf:MenuResponses>
-    <mlf:Items>
-             <mlf:Item mlf:id="ItemId">
-                 <mlf:UnitPrice>200</mlf:UnitPrice>
-                 <mlf:IsUpsell>0</mlf:IsUpsell>
-                 <mlf:Quantity>1</mlf:Quantity>
-             </mlf:Item>
-         <mlf:Item mlf:id="ItemId2">
-             <mlf:UnitPrice>50</mlf:UnitPrice>
-             <mlf:IsUpsell>1</mlf:IsUpsell>
-             <mlf:Quantity>1</mlf:Quantity>
-         </mlf:Item>
-    </mlf:Items>
+    <euro:TelesalesId>UMG</euro:TelesalesId>
+    <euro:ClientId>GRDE</euro:ClientId>
+    <euro:ProductCode>GDV3</euro:ProductCode>
+    <euro:ProductDescription>GRAVDEFY</euro:ProductDescription>
+    <euro:SourceCode>NNNN</euro:SourceCode>
+    <euro:StateCode>CA</euro:StateCode>
+    <euro:StationType>T</euro:StationType>
+    <euro:OrderCall>true</euro:OrderCall>
+    <euro:InquiryCall>false</euro:InquiryCall>
+    <euro:CustomerServiceCall>false</euro:CustomerServiceCall>
+    <euro:ReferralCall>false</euro:ReferralCall>
+    <euro:CreditCardsCall>true</euro:CreditCardsCall>
+    <euro:InfoOnlyCall>false</euro:InfoOnlyCall>
+    <euro:MaleCall>true</euro:MaleCall>
+    <euro:FemaleCall>false</euro:FemaleCall>
+    <euro:Counter1>10</euro:Counter1>
+    <euro:Counter2/>
+    <euro:Counter3/>
+    <euro:Counter4/>
+    <euro:Counter5/>
+    <euro:Counter6/>
+    <euro:Counter7/>
+    <euro:Counter8/>
+    <euro:Counter9/>
+    <euro:Counter10/>
+    <euro:Counter11/>
+    <euro:Counter12/>
+    <euro:Counter13/>
+    <euro:Counter14/>
+    <euro:Counter15/>
+    <euro:Counter16/>
+    <euro:Counter17/>
+    <euro:Counter18/>
+    <euro:Counter19/>
+    <euro:Counter20/>
+    <euro:TransactionDateTime>2011-08-03T00:00:00Z</euro:TransactionDateTime>
+    <euro:OrderId>OrderId</euro:OrderId>
+    <euro:DollarAmount>100.00</euro:DollarAmount>
+    <euro:EuroCompanyId>1</euro:EuroCompanyId>
 </Call>
 ```
 
@@ -326,19 +342,53 @@ No match for the call.
 
 ```
 PUT /calls
-Content-Type: application/roundtrip.sales
+Content-Type: application/euro
 ```
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <Call xmlns="http://www.dial800.com/roundtrip/2011-07-15"
-      xmlns:rs="http://www.dial800.com/roundtrip-sales/2011-08-04">      
+      xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
     <ID>12345678990</ID>
-    <rs:Order payment="amex">
-        <rs:Item price="100.00">OVEN</rs:Item>
-        <rs:Item price="100.00">SPK</rs:Item>
-        <rs:Item price="59.72">ERK 3 PAY</rs:Item>
-    </rs:Order>
+    <euro:TelesalesId>UMG</euro:TelesalesId>
+    <euro:ClientId>GRDE</euro:ClientId>
+    <euro:ProductCode>GDV3</euro:ProductCode>
+    <euro:ProductDescription>GRAVDEFY</euro:ProductDescription>
+    <euro:SourceCode>NNNN</euro:SourceCode>
+    <euro:StateCode>CA</euro:StateCode>
+    <euro:StationType>T</euro:StationType>
+    <euro:OrderCall>true</euro:OrderCall>
+    <euro:InquiryCall>false</euro:InquiryCall>
+    <euro:CustomerServiceCall>false</euro:CustomerServiceCall>
+    <euro:ReferralCall>false</euro:ReferralCall>
+    <euro:CreditCardsCall>true</euro:CreditCardsCall>
+    <euro:InfoOnlyCall>false</euro:InfoOnlyCall>
+    <euro:MaleCall>true</euro:MaleCall>
+    <euro:FemaleCall>false</euro:FemaleCall>
+    <euro:Counter1>10</euro:Counter1>
+    <euro:Counter2/>
+    <euro:Counter3/>
+    <euro:Counter4/>
+    <euro:Counter5/>
+    <euro:Counter6/>
+    <euro:Counter7/>
+    <euro:Counter8/>
+    <euro:Counter9/>
+    <euro:Counter10/>
+    <euro:Counter11/>
+    <euro:Counter12/>
+    <euro:Counter13/>
+    <euro:Counter14/>
+    <euro:Counter15/>
+    <euro:Counter16/>
+    <euro:Counter17/>
+    <euro:Counter18/>
+    <euro:Counter19/>
+    <euro:Counter20/>
+    <euro:TransactionDateTime>2011-08-03T00:00:00Z</euro:TransactionDateTime>
+    <euro:OrderId>OrderId</euro:OrderId>
+    <euro:DollarAmount>100.00</euro:DollarAmount>
+    <euro:EuroCompanyId>1</euro:EuroCompanyId>
 </Call>
 ```
 
