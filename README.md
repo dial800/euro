@@ -21,7 +21,7 @@ $request->setMethod(HTTP_Request2::METHOD_POST)
     ->setAuth('user','password', HTTP_Request2::AUTH_BASIC)
     ->setHeader('Content-type: application/roundtrip.sales')
     ->setBody(
-        "<?xml version=\"1.0\" encoding=\"utf-8\"?" . ">\r\n" .
+        "<?xml version=\"1.0\" encoding=\"utf-8\" ?">\r\n" .
         "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\r\n" .
         "      xmlns:euro=\"http://www.eurorscgedge.com/2011-08-03\">" .
         "<ANI>tel:3105555555</ANI>\r\n" .
