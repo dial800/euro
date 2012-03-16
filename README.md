@@ -27,11 +27,45 @@ $request->setMethod(HTTP_Request2::METHOD_POST)
         "<ANI>tel:3105555555</ANI>\r\n" .
         "<Target>tel:3109999999</Target>\r\n" . 
         "<CallStart>2011-07-15T01:02:03-08:00</CallStart>\r\n" .
-        "<rs:Order payment=\"amex\">\r\n" .
-        "    <rs:Item price="100.00">OVEN</rs:Item>\r\n" .
-        "    <rs:Item price="100.00">SPK</rs:Item>\r\n" .
-        "    <rs:Item price="59.72">ERK 3 PAY</rs:Item>\r\n" .
-        "</rs:Order>\r\n" .
+        "<euro:TelesalesId>UMG</euro:TelesalesId>\r\n" .
+        "<euro:ClientId>GRDE</euro:ClientId>\r\n" .
+        "<euro:ProductCode>GDV3</euro:ProductCode>\r\n" .
+        "<euro:ProductDescription>GRAVDEFY</euro:ProductDescription>\r\n" .
+        "<euro:SourceCode>NNNN</euro:SourceCode>\r\n" .
+        "<euro:StateCode>CA</euro:StateCode>\r\n" .
+        "<euro:StationType>T</euro:StationType>\r\n" .
+        "<euro:OrderCall>true</euro:OrderCall>\r\n" .
+        "<euro:InquiryCall>false</euro:InquiryCall>\r\n" .
+        "<euro:CustomerServiceCall>false</euro:CustomerServiceCall>\r\n" .
+        "<euro:ReferralCall>false</euro:ReferralCall>\r\n" .
+        "<euro:CreditCardsCall>true</euro:CreditCardsCall>\r\n" .
+        "<euro:InfoOnlyCall>false</euro:InfoOnlyCall>\r\n" .
+        "<euro:MaleCall>true</euro:MaleCall>\r\n" .
+        "<euro:FemaleCall>false</euro:FemaleCall>\r\n" .
+        "<euro:Counter1>10</euro:Counter1>\r\n" .
+        "<euro:Counter2/>\r\n" .
+        "<euro:Counter3/>\r\n" .
+        "<euro:Counter4/>\r\n" .
+        "<euro:Counter5/>\r\n" .
+        "<euro:Counter6/>\r\n" .
+        "<euro:Counter7/>\r\n" .
+        "<euro:Counter8/>\r\n" .
+        "<euro:Counter9/>\r\n" .
+        "<euro:Counter10/>\r\n" .
+        "<euro:Counter11/>\r\n" .
+        "<euro:Counter12/>\r\n" .
+        "<euro:Counter13/>\r\n" .
+        "<euro:Counter14/>\r\n" .
+        "<euro:Counter15/>\r\n" .
+        "<euro:Counter16/>\r\n" .
+        "<euro:Counter17/>\r\n" .
+        "<euro:Counter18/>\r\n" .
+        "<euro:Counter19/>\r\n" .
+        "<euro:Counter20/>\r\n" .
+        "<euro:TransactionDateTime>2011-08-03T00:00:00Z</euro:TransactionDateTime>\r\n" .
+        "<euro:OrderId>OrderId</euro:OrderId>\r\n" .
+        "<euro:DollarAmount>100.00</euro:DollarAmount>\r\n" .
+        "<euro:EuroCompanyId>1</euro:EuroCompanyId>\r\n" .
         "</Call>"
     );
 
