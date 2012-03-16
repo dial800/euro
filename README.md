@@ -64,15 +64,49 @@ namespace Dial800
             const string postData    
             = @"<?xml version="1.0" encoding="utf-8" ?>
                 <Call xmlns="http://www.dial800.com/roundtrip/2011-07-15"
-                       xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
-                     <ANI>tel:3105555555</ANI>
-                     <Target>tel:3109999999</Target>
-                     <CallStart>2011-07-15T01:02:03-08:00</CallStart>
-                     <rs:Order payment="amex">
-                         <rs:Item price="100.00">OVEN</rs:Item>
-                         <rs:Item price="100.00">SPK</rs:Item>
-                         <rs:Item price="59.72">ERK 3 PAY</rs:Item>
-                     </rs:Order>
+                      xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
+                    <ANI>tel:3105555555</ANI>
+                    <Target>tel:3109999999</Target>
+                    <CallStart>2011-07-15T01:02:03-08:00</CallStart>
+                    <euro:TelesalesId>UMG</euro:TelesalesId>
+                    <euro:ClientId>GRDE</euro:ClientId>
+                    <euro:ProductCode>GDV3</euro:ProductCode>
+                    <euro:ProductDescription>GRAVDEFY</euro:ProductDescription>
+                    <euro:SourceCode>NNNN</euro:SourceCode>
+                    <euro:StateCode>CA</euro:StateCode>
+                    <euro:StationType>T</euro:StationType>
+                    <euro:OrderCall>true</euro:OrderCall>
+                    <euro:InquiryCall>false</euro:InquiryCall>
+                    <euro:CustomerServiceCall>false</euro:CustomerServiceCall>
+                    <euro:ReferralCall>false</euro:ReferralCall>
+                    <euro:CreditCardsCall>true</euro:CreditCardsCall>
+                    <euro:InfoOnlyCall>false</euro:InfoOnlyCall>
+                    <euro:MaleCall>true</euro:MaleCall>
+                    <euro:FemaleCall>false</euro:FemaleCall>
+                    <euro:Counter1>10</euro:Counter1>
+                    <euro:Counter2/>
+                    <euro:Counter3/>
+                    <euro:Counter4/>
+                    <euro:Counter5/>
+                    <euro:Counter6/>
+                    <euro:Counter7/>
+                    <euro:Counter8/>
+                    <euro:Counter9/>
+                    <euro:Counter10/>
+                    <euro:Counter11/>
+                    <euro:Counter12/>
+                    <euro:Counter13/>
+                    <euro:Counter14/>
+                    <euro:Counter15/>
+                    <euro:Counter16/>
+                    <euro:Counter17/>
+                    <euro:Counter18/>
+                    <euro:Counter19/>
+                    <euro:Counter20/>
+                    <euro:TransactionDateTime>2011-08-03T00:00:00Z</euro:TransactionDateTime>
+                    <euro:OrderId>OrderId</euro:OrderId>
+                    <euro:DollarAmount>100.00</euro:DollarAmount>
+                    <euro:EuroCompanyId>1</euro:EuroCompanyId>
                 </Call>";
 
             const string uri = "http://roundtrip.dial800.com/roundtrip";
@@ -130,11 +164,45 @@ payload = '''
     <ANI>tel:3105555555</ANI>
     <Target>tel:3109999999</Target>
     <CallStart>2011-07-15T01:02:03-08:00</CallStart>
-    <rs:Order payment="amex">
-        <rs:Item price="100.00">OVEN</rs:Item>
-        <rs:Item price="100.00">SPK</rs:Item>
-        <rs:Item price="59.72">ERK 3 PAY</rs:Item>
-    </rs:Order>
+    <euro:TelesalesId>UMG</euro:TelesalesId>
+    <euro:ClientId>GRDE</euro:ClientId>
+    <euro:ProductCode>GDV3</euro:ProductCode>
+    <euro:ProductDescription>GRAVDEFY</euro:ProductDescription>
+    <euro:SourceCode>NNNN</euro:SourceCode>
+    <euro:StateCode>CA</euro:StateCode>
+    <euro:StationType>T</euro:StationType>
+    <euro:OrderCall>true</euro:OrderCall>
+    <euro:InquiryCall>false</euro:InquiryCall>
+    <euro:CustomerServiceCall>false</euro:CustomerServiceCall>
+    <euro:ReferralCall>false</euro:ReferralCall>
+    <euro:CreditCardsCall>true</euro:CreditCardsCall>
+    <euro:InfoOnlyCall>false</euro:InfoOnlyCall>
+    <euro:MaleCall>true</euro:MaleCall>
+    <euro:FemaleCall>false</euro:FemaleCall>
+    <euro:Counter1>10</euro:Counter1>
+    <euro:Counter2/>
+    <euro:Counter3/>
+    <euro:Counter4/>
+    <euro:Counter5/>
+    <euro:Counter6/>
+    <euro:Counter7/>
+    <euro:Counter8/>
+    <euro:Counter9/>
+    <euro:Counter10/>
+    <euro:Counter11/>
+    <euro:Counter12/>
+    <euro:Counter13/>
+    <euro:Counter14/>
+    <euro:Counter15/>
+    <euro:Counter16/>
+    <euro:Counter17/>
+    <euro:Counter18/>
+    <euro:Counter19/>
+    <euro:Counter20/>
+    <euro:TransactionDateTime>2011-08-03T00:00:00Z</euro:TransactionDateTime>
+    <euro:OrderId>OrderId</euro:OrderId>
+    <euro:DollarAmount>100.00</euro:DollarAmount>
+    <euro:EuroCompanyId>1</euro:EuroCompanyId>
 </Call>
 '''
 r = request.post('http://routing.dial800.com/routing',
