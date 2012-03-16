@@ -23,7 +23,7 @@ $request->setMethod(HTTP_Request2::METHOD_POST)
     ->setBody(
         "<?xml version=\"1.0\" encoding=\"utf-8\"?" . ">\r\n" .
         "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\r\n" .
-        "      xmlns:rs=\"http://www.dial800.com/roundtrip-sales/2011-08-04\">" .
+        "      xmlns:euro=\"http://www.eurorscgedge.com/2011-08-03\">" .
         "<ANI>tel:3105555555</ANI>\r\n" .
         "<Target>tel:3109999999</Target>\r\n" . 
         "<CallStart>2011-07-15T01:02:03-08:00</CallStart>\r\n" .
@@ -64,7 +64,7 @@ namespace Dial800
             const string postData    
             = @"<?xml version="1.0" encoding="utf-8" ?>
                 <Call xmlns="http://www.dial800.com/roundtrip/2011-07-15"
-                       xmlns:rs="http://www.dial800.com/roundtrip-sales/2011-08-04">      
+                       xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
                      <ANI>tel:3105555555</ANI>
                      <Target>tel:3109999999</Target>
                      <CallStart>2011-07-15T01:02:03-08:00</CallStart>
@@ -126,7 +126,7 @@ from requests.auth import HTTPBasicAuth
 payload = '''
 <?xml version="1.0" encoding="utf-8" ?>
 <Call xmlns="http://www.dial800.com/roundtrip/2011-07-15"
-      xmlns:rs="http://www.dial800.com/roundtrip-sales/2011-08-04">      
+      xmlns:euro="http://www.eurorscgedge.com/2011-08-03">      
     <ANI>tel:3105555555</ANI>
     <Target>tel:3109999999</Target>
     <CallStart>2011-07-15T01:02:03-08:00</CallStart>
