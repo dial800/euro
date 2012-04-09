@@ -438,3 +438,7 @@ No match for the call.
 ### Dial800
 
 [Our native interface](http://docs.dial800.com/).
+
+### Omni
+
+Working with Omni? You can find more details [here](https://github.com/dial800/omni}).
