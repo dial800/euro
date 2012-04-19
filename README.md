@@ -19,7 +19,7 @@ We know. You have two days to integrate with us. Don't worry, it's easy. We're h
 $request = new HTTP_Request2('http://routing.dial800.com/roundtrip');
 $request->setMethod(HTTP_Request2::METHOD_POST)
     ->setAuth('user','password', HTTP_Request2::AUTH_BASIC)
-    ->setHeader('Content-type: application/euro')
+    ->setHeader('Content-Type: application/euro')
     ->setBody(
         "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\r\n" .
         "<Call xmlns=\"http://www.dial800.com/roundtrip/2011-07-15\r\n" .
@@ -241,7 +241,7 @@ payload = '''
 '''
 r = request.post('http://routing.dial800.com/routing',
                  auth=HTTPBasicAuth('user','password'),
-                 headers={'content-type': 'application/euro'},
+                 headers={'Content-Type': 'application/euro'},
                  data=payload)
 ```
 
@@ -441,4 +441,4 @@ No match for the call.
 
 ### Omni
 
-Working with Omni? You can find more details [here](https://github.com/dial800/omni}).
+Working with Omni? You can find more details [here](https://github.com/dial800/omni).
