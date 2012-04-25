@@ -263,7 +263,7 @@ response     = http.request(request)
 
 ## Reference
 
-### Authentication
+The Reference documentation can be found [here](http://docs.dial800.com/dial800/reference).
 
 ### POST
 
@@ -441,4 +441,4 @@ No match for the call.
 
 ### Omni
 
-Working with Omni? You can find more details [here](https://github.com/dial800/omni).
+Working with Omni? You can find more details [here](https://docs.dial800.com/dial800/omni).
